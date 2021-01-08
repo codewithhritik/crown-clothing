@@ -1,7 +1,8 @@
 import React from 'react';
-import './App.css';
-import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Route, Switch, Redirect } from 'react-router-dom';
+
+import './App.css';
 
 import HomePage from './pages/homepage/hompage.component';
 import ShopPage from './pages/shop/shop.component';
