@@ -1,3 +1,4 @@
+import { signOutFailure } from "../user/user.actions";
 import CartActionTypes from "./cart.types";
 import { addItemToCart, removeItemFromCart } from "./cart.utils";
 
@@ -25,6 +26,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 cartItems: state.cartItems.filter(
                     cartItem => cartItem.id !== action.payload.id
                 )
+            };
+        case CartActionTypes.CLEAR_CART:
+            return {
+                ...state,
+                cartItems: []
             };
         case CartActionTypes.REMOVE_ITEM:
             return {
